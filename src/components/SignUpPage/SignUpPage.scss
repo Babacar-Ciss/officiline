@@ -1,0 +1,386 @@
+.SignUpPage {
+    width: 100%;
+    max-height: 100vh;
+    padding-top: 85px;
+    position: relative;
+    background-image: url(../../assets/images/sign-up/bg-pattern-side.svg);
+    background-repeat: no-repeat;
+    background-size: 2036px;
+    background-position: -42% 79%;
+    display: flex;
+
+    @media (min-width : 768px ) and (max-width : 1439px) {
+        padding-top: 72px;
+        width: 100%;
+    }
+
+    @media (min-width : 375px ) and (max-width : 767px) {
+        padding-top: 46px ;
+    }
+
+    &::after {
+        z-index: -1;
+        content: '';
+        position : absolute;
+        width: 420px;
+        height: 100vh;
+        transform: translateY(-10%);
+        background-color: #25293A;
+        right: 0;
+
+        @media (min-width : 768px ) and (max-width : 1439px) {
+            width: 100%;
+            height: 380px;
+            bottom: 0;
+        }
+
+        @media (min-width : 375px ) and (max-width : 767px) {
+            width: 100%;
+            height: 380px;
+            bottom: 0;
+        }
+    }
+
+   
+
+    &__container {
+        width: 77%;
+        margin-inline: auto;
+        display: grid;
+
+        grid-template-columns: 50% 11.5% 40%;
+        grid-template-rows: 30px 154px auto 158px 465px;
+
+        @media (min-width : 375px ) and (max-width : 767px) {
+            grid-template-columns: 100%;
+            grid-template-rows: 30px 80px auto 158px 465px;
+            width: 90%;
+        }
+
+        @media (min-width : 768px ) and (max-width : 1439px) {
+            width: 90%;
+            grid-template-columns: 100%;
+            grid-template-rows: 30px 104px 510px 158px 465px;
+        }
+
+        & a {
+            display: flex;
+        }
+        
+        &__logo {
+            // display: flex;
+            
+            @media (min-width : 375px ) and (max-width : 767px) {
+                grid-row: 1 / 2;
+            }
+        }
+
+
+
+        &--left {
+            width: 100%;
+            grid-column: 1 / 2;
+            grid-row: 3 /4;
+            
+
+            @media (min-width : 375px ) and (max-width : 767px) {
+                grid-row: 3 / 4;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+
+            @media (min-width : 768px ) and (max-width : 1439px) {
+                grid-row: 3 / 4;
+                margin-top: 0;
+                width: 100%;
+                margin-inline: auto;
+                text-align: center;
+            }
+
+            h1#h1 {
+                color: #333950;
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 64px;
+                margin-bottom: 24px;
+                margin-top: 0;
+                text-align: left;
+                
+
+                @media (min-width : 768px ) and (max-width : 1439px) {
+                  font-size: 40px;
+                  text-align: center;
+                }
+
+                @media (min-width : 375px ) and (max-width : 767px) {
+                    font-size: 40px;
+                    margin-bottom: 0px;
+                    text-align: center;
+                }
+        
+            }
+            
+
+            p#details {
+                color: #747B95;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 40px;
+                text-align: left;
+                padding-right: 20px;
+
+                @media (min-width : 768px ) and (max-width : 1439px) {
+                    font-size: 16px;
+                    padding-inline: 100px;
+                    text-align: center;
+                }
+
+                @media (min-width : 375px ) and (max-width : 767px) {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+
+            &__countdown-section {
+
+                @media (min-width : 768px ) and (max-width : 1439px) {
+                    width: 58%;
+                    margin: 0 auto;
+                }
+
+                h3 {
+                    text-align: left;
+                    color:#333950;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 48px;        
+                    letter-spacing: 5px;
+
+                    @media (min-width : 768px ) and (max-width : 1439px) {
+                        text-align: center;
+                    }
+
+                    @media (min-width : 375px ) and (max-width : 767px) {
+                        text-align: center;
+                    }
+    
+    
+                    span {
+                        color: #5175FF;
+                    }
+                  }
+            }
+
+        }
+
+        &--right {
+            width: 445px;
+            height: 508px;
+            grid-row: 3 / 4;
+            grid-column: 3 / 4;
+            
+            background-color: #FFF;
+            border-radius: 13px;
+            box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+
+            form {
+                position: relative;
+            }
+
+
+            @media (min-width : 375px ) and (max-width : 767px) {
+                grid-row: 4 / 5;
+                grid-column:  1 / 2;
+                width: 100%;
+            }
+    
+
+            @media (min-width : 768px ) and (max-width : 1439px) {
+                grid-row: 4/5;
+                grid-column:  1 / 2;
+                margin-inline: auto;
+            }
+
+            &__register {
+                width: 80.5%;
+                margin-inline: auto;
+                padding-top: 40px;
+                font-family: "Kumbh Sans";
+
+                #register--btn {
+                    margin-top: 40px;
+                }
+
+
+                &__dropbox {
+                    position: relative;
+
+                    &__input {
+                        height: 45px;
+                        width: 100%;
+                        background-color: #FFF;
+                        text-align: left;
+                        border-bottom: 1px solid rgba(116, 123, 149, 0.25);
+                        padding-left: 16px;
+                        text-align: left;
+                    }
+                    
+
+                    &--arrow {
+                        background-image: url(../../assets/images/sign-up/icon-arrow-down.svg);
+                        background-repeat: no-repeat;
+                        background-size: 11px 6px;
+                        position: absolute;
+                        width: 21px;
+                        height: 13px;
+                        top: 12px;
+                        right: 13px;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                    }
+                    
+                    #formule {
+                        color: #333950;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 28px;
+                        text-align: left;
+                        padding-left: 20px;
+                        padding-bottom: 17px;
+                        border-bottom: 1px solid rgba(116, 123, 149, 0.25);
+                        margin-bottom: 24px;
+
+
+                        span {
+                            color : rgba(51, 57, 80, 0.4);
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 28px;
+                            margin-left: 7px;   
+                        }
+                    }
+
+                    &__options {
+                        z-index: 2;
+                        color: #333950;
+                        top: 60px;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        cursor: pointer;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 28px;
+                        background-color: #FFF;
+                        border: 1px solid rgba(51, 57, 80, 0.15);
+                        border-radius: 8px;
+                        width: 100%;
+                        display: none;
+                        animation: 0.5s fadeIn  ;
+                        transition: all 0.2s;
+
+
+                        & > * {
+                            width: 82%;
+                            margin-inline: auto ;
+
+                        }
+
+                        &--option {
+                            border-bottom: 1px solid rgba(116, 123, 149, 0.25);
+                            padding: 16px 0;
+                            text-align: left;
+                            position: relative;
+
+                            img {
+                                position :absolute;
+                                top: 22px;
+                                right: 10px;
+                            }
+                        
+                        }
+
+                        &--option:last-child {
+                            border : none;
+                        }
+
+                        span {
+                         color : rgba(51, 57, 80, 0.4);
+                         font-weight: 700;
+                         font-size: 16px;
+                         line-height: 28px;
+                         margin-left: 7px;      
+
+                        }
+                    }
+                }
+                 
+                form {
+                    position : relative;
+
+                }
+
+
+                label {
+                    position: absolute;
+                    right: 7%;
+                }
+
+                input {
+                    color: rgba(51, 57, 80, 1);
+                    font-family: "Kumbh Sans";
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 45px ;
+                    border: none;
+                    font-size: 16px;
+                    display: block;
+                    margin-bottom: 24px;
+                    border-bottom: 1px solid rgba(116, 123, 149, 0.3);
+                    padding-bottom: 16px;
+                    padding-left: 20px;
+
+                    &::placeholder {
+                        font-family: "Kumbh Sans";
+                        color: rgba(116, 123, 149, 0.7);
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button 
+                        {
+                            -webkit-appearance: none;
+                            margin: 0;
+                }
+
+                input[type=number] {
+                        -moz-appearance: textfield;
+                }
+
+                input[type=submit] {
+                    background-color: #5175FF;
+                    
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-25px) ;
+        opacity: 0;
+    }
+    100% {
+        opacity : 1;
+        transform: translateY(0);
+    }
+}
