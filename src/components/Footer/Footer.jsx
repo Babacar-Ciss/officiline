@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="Footer">
             <div className="Footer__container">
                 <div className="Footer__container--left">
-                    <h3>COMING <span> 4 NOV 2022 </span></h3>
+                    <h3>COMING <span> 4 NOV 2023 </span></h3>
                     <CounterContainer
                         bgColor = "rgba(51, 57, 80, 1)"
                         pColor = "rgba(255, 255, 255, 0.5)"

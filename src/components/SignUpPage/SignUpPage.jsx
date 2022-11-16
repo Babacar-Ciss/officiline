@@ -4,7 +4,6 @@ import crossLogo from '../../assets/images/sign-up/icon-cross.svg';
 import CounterContainer from "../CounterContainer/CounterContainer"
 import Button from "../Button/Button";
 import {Link} from "react-router-dom";
-import LinkStyleComponent from '../LinkStyle/LinkStyle';
 import "./SignUpPage.scss"
 import selectedLogo from '../../assets/images/sign-up/icon-check.svg'
 import  {useState, useEffect} from "react";
@@ -13,7 +12,6 @@ import {useForm} from 'react-hook-form';
 export default function SignUpPage(props) {
 
   const [isClose, setIsClose] = useState(false);
-  // const [selectedId, setSelectedId] = useState(props.cardRefSelected );
   const [selectedId, setSelectedId] = useState(props.cardRefSelected ? props.cardRefSelected : 0);
   const [isEmailCorrect, setIsEmailCorrect] = useState(false)
   const regexPatternForEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g ; 
@@ -44,10 +42,8 @@ export default function SignUpPage(props) {
     }
   ]
 
-  // console.log(errors.compagny);
 
   const watchEmail = watch("email");
-  // console.log(watchEmail);
 
 
   useEffect(() => {
@@ -59,12 +55,7 @@ export default function SignUpPage(props) {
    }
   }, [watchEmail]);
 
-  const isCorrectEmail = () => {
-  //  console.log(regexPatternForEmail.test(watchEmail));
-  // console.log(true) 
-  }
-
-  console.log(props.cardRefSelected)
+ 
 
   return (
     <div className='SignUpPage' onClick={() => console.log(props.id)}>
@@ -76,7 +67,7 @@ export default function SignUpPage(props) {
                 <p id='details' >Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.</p>
 
                 <div className='SignUpPage__container--left__countdown-section'>
-                    <h3>COMING <span> 4 NOV 2022 </span></h3>
+                    <h3>COMING <span> 4 NOV 2023 </span></h3>
                     <CounterContainer
                         bgColor = "rgba(81, 117, 255, 0.1)"
                         pColor = "rgba(51, 57, 80, 0.5)"

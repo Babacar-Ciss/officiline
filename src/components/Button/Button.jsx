@@ -49,8 +49,6 @@ const hoverColorPicker  = (btn) => {
     }
 }
 
-
-
 const Button = (props) => {
 
     return(
@@ -67,7 +65,7 @@ const Button = (props) => {
 >                 
                     {props.children} 
         
-        </ButtonStyle>
+           </ButtonStyle>
     )
 
 }

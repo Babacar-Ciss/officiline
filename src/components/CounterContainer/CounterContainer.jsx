@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const CounterContainer = (props) => {
     
     const currentYear = new Date().getFullYear();
-    const DeadlineTime = new Date(`November 4 ${currentYear} 00:00:00`)
+    const DeadlineTime = new Date(`November 4 ${currentYear + 1} 00:00:00`)
     const currentTime = new Date()
     const remainingTime = DeadlineTime - currentTime;
 
